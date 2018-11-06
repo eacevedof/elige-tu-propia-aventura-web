@@ -2,6 +2,22 @@
 
 ## Errores:
 
+### Composer update
+```ssh
+$ composer update
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 0 installs, 0 updates, 0 removals
+Package fabpot/php-cs-fixer is abandoned, you should avoid using it. Use friendsofphp/php-cs-fixer instead.
+Package rhumsaa/uuid is abandoned, you should avoid using it. Use ramsey/uuid instead.
+Package silex/silex is abandoned, you should avoid using it. Use symfony/flex instead.
+Generating autoload files
+```
+### bower
+```ssh
+$ bower install
+bower flat-ui-official#~2.1.3        ENOTFOUND Package flat-ui-official not found
+```
 ### Doctrine  wtf!
 ```ssh
 $ php bin/doctrine orm:database-schema:create
@@ -14,18 +30,6 @@ if [ -d /proc/cygdrive ] && [[ $(which php) == $(readlink -n /proc/cygdrive)/* ]
 fi
 
 "${dir}/doctrine" "$@"
-```
-
-### Composer update
-```ssh
-$ composer update
-Loading composer repositories with package information
-Updating dependencies (including require-dev)
-Package operations: 0 installs, 0 updates, 0 removals
-Package fabpot/php-cs-fixer is abandoned, you should avoid using it. Use friendsofphp/php-cs-fixer instead.
-Package rhumsaa/uuid is abandoned, you should avoid using it. Use ramsey/uuid instead.
-Package silex/silex is abandoned, you should avoid using it. Use symfony/flex instead.
-Generating autoload files
 ```
 
 # Choose Your Own Adventure
