@@ -1,3 +1,33 @@
+# Instalando en 2018
+
+## Errores:
+
+### Doctrine  wtf!
+```ssh
+$ php bin/doctrine orm:database-schema:create
+
+dir=$(cd "${0%[/\\]*}" > /dev/null; cd "../vendor/doctrine/orm/bin" && pwd)
+
+if [ -d /proc/cygdrive ] && [[ $(which php) == $(readlink -n /proc/cygdrive)/* ]]; then
+   # We are in Cgywin using Windows php, so the path must be translated
+   dir=$(cygpath -m "$dir");
+fi
+
+"${dir}/doctrine" "$@"
+```
+
+### Composer update
+```ssh
+$ composer update
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 0 installs, 0 updates, 0 removals
+Package fabpot/php-cs-fixer is abandoned, you should avoid using it. Use friendsofphp/php-cs-fixer instead.
+Package rhumsaa/uuid is abandoned, you should avoid using it. Use ramsey/uuid instead.
+Package silex/silex is abandoned, you should avoid using it. Use symfony/flex instead.
+Generating autoload files
+```
+
 # Choose Your Own Adventure
 
 **Choose Your Own Adventure** is a series of children's gamebooks where each story is written
